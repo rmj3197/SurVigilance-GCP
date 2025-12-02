@@ -25,7 +25,6 @@ SCHEDULES=(
     "0 13 * * *"           
     "0,15,30,45 20 * * *"  
     "0 21 * * *"           
-    "30 23 * * *"
 )
 
 SERVICE_ACCOUNT="956218653298-compute@developer.gserviceaccount.com"
