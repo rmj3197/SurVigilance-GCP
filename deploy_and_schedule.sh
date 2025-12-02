@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROJECT_ID="survigilance-data-tool"
-IMAGE_PATH="us-central1-docker.pkg.dev/survigilance-data-tool/survigilance-repo/survigilance-test:latest"
+PROJECT_ID="survigilance-data-tool" # PROJECT ID NEEDS TO BE CHANGED TO YOUR PROJECT ID
+IMAGE_PATH="us-central1-docker.pkg.dev/survigilance-data-tool/survigilance-repo/survigilance-test:latest" #IMAGE_PATH THIS ALSO NEEDS TO BE UPDATED
 JOB_NAME="survigilance-test-run"
 VPC_NAME="survigilance-vpc" # Name for the VPC network
 
@@ -27,7 +27,7 @@ SCHEDULES=(
     "0 21 * * *"           
 )
 
-SERVICE_ACCOUNT="956218653298-compute@developer.gserviceaccount.com"
+SERVICE_ACCOUNT="956218653298-compute@developer.gserviceaccount.com" #PLEASE UPDATE WITH YOUR SERVICE ACCOUNT
 
 gcloud config set project "${PROJECT_ID}"
 
