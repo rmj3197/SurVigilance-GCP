@@ -9,6 +9,7 @@ FILENAME="report-${TIMESTAMP}-${REGION}.xlsx"
 
 pytest -n 4 --flake-finder --flake-runs=3 --random-order --excelreport=${FILENAME} -k "test_scrape_ and _sb.py" --tb long|| true
 
+# Update with <YOUR BUCKET NAME>
 echo "Copying report to gs://survigilance-results/${FILENAME}"
 gsutil cp ${FILENAME} gs://survigilance-results/${FILENAME}
 

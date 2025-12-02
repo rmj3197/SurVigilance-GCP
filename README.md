@@ -12,3 +12,6 @@ The SurVigilance-GCP project aims to provide a comprehensive, automated framewor
 *   `deploy_and_schedule.sh`: This script deploys the Docker image as a Cloud Run job and sets up Cloud Scheduler jobs to trigger it periodically across multiple Google Cloud regions. It requires the user to update placeholder variables for `PROJECT_ID`, `IMAGE_PATH`, and `SERVICE_ACCOUNT`.
 *   `run_tests.sh`: This script executes Pytest tests, generates an Excel report of the test results, and uploads the report to a specified Google Cloud Storage (GCS) bucket. Users must update the placeholder for `<YOUR BUCKET NAME>` in the script.
 
+## Schematic Diagram Depicting the Workflow
+
+![GCP Workflow](GCP_Workflow.png "GCP_Workflow")
