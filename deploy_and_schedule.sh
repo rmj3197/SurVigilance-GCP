@@ -19,12 +19,12 @@ REGIONS=(
 )
 
 SCHEDULES=(
-    "0,15,30,45 9 * * *"   
-    "0 10 * * *"            
-    "0,15,30,45 12 * * *"  
-    "0 13 * * *"           
-    "0,15,30,45 20 * * *"  
-    "0 21 * * *"           
+    "0,15,30,45 1 * * *"   
+    "0 2 * * *"            
+    "0,15,30,45 8 * * *"  
+    "0 9 * * *"           
+    "0,15,30,45 17 * * *"  
+    "0 18 * * *"           
 )
 
 SERVICE_ACCOUNT="956218653298-compute@developer.gserviceaccount.com" #PLEASE UPDATE WITH YOUR SERVICE ACCOUNT

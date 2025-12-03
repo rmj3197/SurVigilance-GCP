@@ -1,6 +1,9 @@
 #!/bin/bash
 
-REGION=${GCP_REGION:-"local"}
+ZONE_PATH=$(curl -s --connect-timeout 1 -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/zone" || true)
+REGION=$(basename "$ZONE_PATH")
+
+echo "Detected execution region: ${REGION}"
 
 TIME_ZONE="Etc/UTC"
 
