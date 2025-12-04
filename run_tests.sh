@@ -14,6 +14,6 @@ pytest -n 4 --flake-finder --flake-runs=3 --random-order --excelreport=${FILENAM
 
 # Update with <YOUR BUCKET NAME>
 echo "Copying report to gs://survigilance-results/${FILENAME}"
-gsutil cp ${FILENAME} gs://survigilance-results/${FILENAME}
+gsutil cp ${FILENAME} gs://survigilance-results/${FILENAME} # gsutil has been replaced by gcloud gcloud cli which can also be here here. 
 
 echo "Done."
