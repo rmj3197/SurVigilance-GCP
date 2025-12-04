@@ -44,7 +44,12 @@ for region in REGIONS:
             df["time"] = dt.time()
         all_dataframes.append(df)
 
-combined_dataframes = pd.concat(all_dataframes).reset_index(drop = True)[['full_test_name','region','date','time','result']].dropna()
+combined_dataframes = (
+    pd.concat(all_dataframes)
+    .reset_index(drop=True)[["full_test_name", "region", "date", "time", "result"]]
+    .dropna()
+)
+
 
 def summarize_tests(group):
     failed_tests = group[group["result"] == "FAILED"]
@@ -56,12 +61,9 @@ def summarize_tests(group):
 
 
 summary = (
-    combined_dataframes.groupby(["time", "region"])
-    .apply(summarize_tests)
-    .sort_index()
+    combined_dataframes.groupby(["time", "region"]).apply(summarize_tests).sort_index()
 )
 
 result_table = summary.unstack(level="region")
 result_table = result_table.fillna("")
 result_table.to_excel("result_table.xlsx")
-
